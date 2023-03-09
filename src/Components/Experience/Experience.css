@@ -39,3 +39,7 @@
     z-index: -1;
     box-shadow: var(--boxShadow);
  }
+
+ .achievement span:nth-last-of-type(1){
+   color:var(--orange) ; 
+ }
