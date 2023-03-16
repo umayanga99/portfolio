@@ -4,12 +4,16 @@ import HeartEmoji from "../../img/heartemoji.png";
 import Glasses from "../../img/glasses.png";
 import Humble from "../../img/humble.png";
 import Card from "../Card/Card";
+import { themeContext } from "../../Context";
+import { useContext } from "react";
 const Services=()=>{
+    const theme=useContext(themeContext);
+    const darkMode=theme.state.darkMode;
     return(
         <div className="services">
             {/*left side*/}
             <div className="awesome">
-                <span>My Awesome</span>
+                <span style={{color:darkMode?"white":""}}>My Awesome</span>
                 <span>Services</span>
                 <span>
                 As a data science engineer, I am responsible for the development and maintenance 
@@ -23,21 +27,21 @@ const Services=()=>{
             </div>
             {/*right side*/}
             <div className="cards">
-               <div style={{left:'21rem'}} >
+               <div style={{left:'21rem',left:"13rem"}} >
                 <Card
                 emoji={HeartEmoji}
                 heading={'Web Developer'}
                 detail={"Fronr-End , Back-End , React.js , Node.js "} />
                </div>
 
-               <div style={{top:'10rem',left:"4rem"}}>
+               <div style={{top:'14rem',left:"-2rem"}}>
                 <Card
                     emoji={Humble}
                     heading={"Data Science Enginner"}
                     detail={"We shape the world"}/>
                </div>
 
-              <div style={{top:"18rem",left:"19rem"}}>
+              <div style={{top:"18rem",left:"15rem"}}>
               <Card
                emoji={Glasses}
                heading={"Game developer"}

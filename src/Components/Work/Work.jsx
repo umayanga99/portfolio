@@ -5,11 +5,15 @@ import Fiverr from "../../img/fiverr.png"
 import Amazon from "../../img/amazon.png"
 import Shopify from "../../img/Shopify.png"
 import Facebook from "../../img/Facebook.png"
+import { themeContext } from '../../Context'
+import { useContext } from 'react'
 const Work = () => {
+    const theme=useContext(themeContext);
+    const darkMode=theme.state.darkMode;
   return (
     <div className="works">
         <div className="awesome">
-        <span>Works For All These</span>
+        <span style={{color:darkMode?"White":""}}>Works For All These</span>
             <span>Brands & Clients </span>
             <span>
                 As a data science engineer, I am responsible for the development and maintenance 
