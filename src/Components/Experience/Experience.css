@@ -43,3 +43,12 @@
  .achievement span:nth-last-of-type(1){
    color:var(--orange) ; 
  }
+
+ @media screen and (max-width:1000px) {
+   .experience{
+      display: flex;
+      flex-direction: column;
+      height: auto;
+   }
+   
+ }

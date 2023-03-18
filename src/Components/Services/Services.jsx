@@ -6,11 +6,14 @@ import Humble from "../../img/humble.png";
 import Card from "../Card/Card";
 import { themeContext } from "../../Context";
 import { useContext } from "react";
+import {motion} from "framer-motion"
+
 const Services=()=>{
     const theme=useContext(themeContext);
     const darkMode=theme.state.darkMode;
+    const transition={duration:1,type:"spring"}
     return(
-        <div className="services">
+        <div className="services" id="Services">
             {/*left side*/}
             <div className="awesome">
                 <span style={{color:darkMode?"white":""}}>My Awesome</span>
@@ -27,26 +30,32 @@ const Services=()=>{
             </div>
             {/*right side*/}
             <div className="cards">
-               <div style={{left:'21rem',left:"13rem"}} >
+               <motion.div initial={{left:"25rem"}}
+               whileInView={{left:"14rem"}}
+               transition={transition} >
                 <Card
                 emoji={HeartEmoji}
                 heading={'Web Developer'}
                 detail={"Fronr-End , Back-End , React.js , Node.js "} />
-               </div>
+               </motion.div>
 
-               <div style={{top:'14rem',left:"-2rem"}}>
+               <motion.div initial={{top:'12rem',left:"-11rem"}}
+               whileInView={{left:"-4rem"}}
+               transition={transition}>
                 <Card
                     emoji={Humble}
                     heading={"Data Science Enginner"}
                     detail={"We shape the world"}/>
-               </div>
+               </motion.div>
 
-              <div style={{top:"18rem",left:"15rem"}}>
+              <motion.div initial={{top:"19rem",left:"25rem"}}
+              whileInView={{left:"12rem"}}
+              transition={transition}>
               <Card
                emoji={Glasses}
                heading={"Game developer"}
                detail={"real engine , C# , Unity"}/>
-              </div>
+              </motion.div>
               <div className="blur s-blur2" style={{background:"var(--purple)"}}></div>
             </div>
         </div>

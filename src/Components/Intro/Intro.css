@@ -102,3 +102,25 @@
     left: 56%;
     filter: blur(72%);
 }
+
+@media screen and (max-width:700px) {
+     .intro{
+        flex-direction: column;
+        height:60rem ;
+        gap: 0rem;
+     }
+
+     .i-right{
+        transform: scale(0.75);
+        left: -3rem;
+     }
+
+     .i-right .blur{
+        display: none;
+     }
+
+     .floating-dev:nth-last-of-type(1){
+        top: -7rem!important;
+     }
+     
+}

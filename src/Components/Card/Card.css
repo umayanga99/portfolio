@@ -35,3 +35,9 @@
     color: #5290FD;
 
 }
+
+/* @media screen and (max-width:1000px){
+    .card{
+        width: 100%;
+    }
+} */
